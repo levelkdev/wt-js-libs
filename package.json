@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
+    "test-build": "./node_modules/mocha/bin/mocha test -- test-build",
     "postinstall": "scripts/install.sh",
     "testrpc": "./node_modules/ethereumjs-testrpc/bin/testrpc",
     "build": "webpack --config build.web.config.js && webpack --config build.node.config.js"
@@ -31,6 +32,7 @@
     "babel-preset-es2015": "^6.3.13",
     "chai": "^3.5.0",
     "eth-lightwallet": "^2.5.4",
+    "ethereumjs-util": "^5.1.2",
     "kbpgp": "^2.0.72",
     "truffle-hdwallet-provider": "0.0.3"
   },

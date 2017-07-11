@@ -2,6 +2,7 @@
 logs
 *.log
 npm-debug.log*
+.node-*
 
 # Contracts compiled
 build/contracts
