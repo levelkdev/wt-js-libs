@@ -36,7 +36,8 @@
     "eth-lightwallet": "^2.5.4",
     "ethereumjs-util": "^5.1.2",
     "kbpgp": "^2.0.72",
-    "truffle-hdwallet-provider": "0.0.3"
+    "truffle-hdwallet-provider": "0.0.3",
+    "zeppelin-solidity": "^1.1.0"
   },
   "devDependencies": {
     "ethereumjs-testrpc": "3.0.3",
