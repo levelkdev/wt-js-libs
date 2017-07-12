@@ -268,11 +268,7 @@ var WTHotel = function(options){
     const hotelIndex = wtHotelAddresses.indexOf(hotelAddress);
     let wtHotel = self.web3.eth.contract(self.contracts.WTHotel.abi).at(hotelAddress);
     let wtHotelUnitType = self.web3.eth.contract(self.contracts.WTHotelUnitType.abi).at(await wtHotel.getUnitType(self.web3.toHex(unitType)));
-    const unitAmenities = wtHotelUnitType.getAmenities(index).map(function(a,i){
-      return parseInt(a);
-    });
-    const amenityIndex = unitAmenities.indexOf(parseInt(amenity));
-    let data = wtHotelUnitType.removeAmenity.getData(index, amenityIndex);
+    let data = wtHotelUnitType.removeAmenity.getData(index, amenity);
     data = wtHotel.callUnitType.getData(self.web3.toHex(unitType), data);
     data = self.wtIndex.callHotel.getData(hotelIndex, data);
     let tx = await self.wallet.sendTx(password, {
